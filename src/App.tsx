@@ -21,7 +21,8 @@ const App = () => (
       <CartProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        {/* Updated line below */}
+        <BrowserRouter basename="/priisme">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
@@ -30,7 +31,6 @@ const App = () => (
             <Route path="/salons" element={<Salons />} />
             <Route path="/order-success" element={<OrderSuccess />} />
             <Route path="/booking-success" element={<BookingSuccess />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
